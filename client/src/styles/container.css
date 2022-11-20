@@ -11,10 +11,12 @@
 
 #landingQuote {
   padding: 0 6em;
+  font-family: "Homemade Apple", cursive;
 }
 
 .author {
   color: #d2673d;
   display: inline-block;
   transform: translate(50px, 50px);
+  font-family: "Poppins", sans-serif;
 }
