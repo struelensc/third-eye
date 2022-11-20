@@ -1,12 +1,9 @@
 {
   "name": "third-eye",
   "version": "1.0.0",
-  "homepage": "https://struelensc.github.io/third-eye",
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "node server/server.js --ignore client",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
@@ -16,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.3.0",
-    "gh-pages": "^4.0.0"
+    "concurrently": "^5.3.0"
   }
 }
