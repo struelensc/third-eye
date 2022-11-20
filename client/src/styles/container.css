@@ -1,0 +1,20 @@
+.image1Background {
+  background-image: url("../assets/image1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+}
+
+.landingPage {
+  min-height: 100vh;
+}
+
+#landingQuote {
+  padding: 0 6em;
+}
+
+.author {
+  color: #d2673d;
+  display: inline-block;
+  transform: translate(50px, 50px);
+}

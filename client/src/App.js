@@ -1,6 +1,6 @@
 import React from "react";
-import AppContainer from "./components/AppContainer";
+import Landing from "./components/Landing";
 
-const App = () => <AppContainer />;
+const App = () => <Landing />;
 
 export default App;
