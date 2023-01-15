@@ -6,16 +6,12 @@ import "../styles/tarot.css";
 
 export default function TarotCard() {
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <div className="card-group">
-            <div className="tarot-card"></div>
-            <div className="tarot-card"></div>
-            <div className="tarot-card"></div>
-          </div>
-        </Col>
-      </Row>
+    <Container className="min-vh-100 d-flex justify-content-center align-items-center">
+      <div className="card-group">
+        <div className="tarot-card"></div>
+        <div className="tarot-card"></div>
+        <div className="tarot-card"></div>
+      </div>
     </Container>
   );
 }
