@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../styles/container.css";
+import TarotCard from "./TarotCard";
 
 export default function Landing() {
   return (
@@ -16,7 +17,9 @@ export default function Landing() {
             </h3>
           </div>
         </Col>
-        <Col className="image1Background"></Col>
+        <Col className="image1Background">
+          <TarotCard />
+        </Col>
       </Row>
     </Container>
   );
