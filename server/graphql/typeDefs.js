@@ -8,7 +8,7 @@ module.exports = gql`
   }
 
   type Query {
-    card(ID: ID!): Card!
-    getCards(amount: Int): [Card]
+    getCard(ID: ID!): Card!
+    getCards: [Card]
   }
 `;
