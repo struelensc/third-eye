@@ -5,6 +5,9 @@ import Col from "react-bootstrap/Col";
 import "../styles/landing.css";
 import TarotCard from "./TarotCard";
 
+import { useQuery } from "@apollo/client";
+import {} from "../../utils/queries";
+
 export default function Landing() {
   const [isVisible, setVisible] = useState(true);
 
@@ -30,9 +33,19 @@ export default function Landing() {
               onClick={toggleVisibility}
               className={`${isVisible ? "visible" : "fade"}`}
             >
+              {/* Filler card stack */}
+              <div className="card-group">
+                <div className="tarot-card"></div>
+                <div className="tarot-card"></div>
+                <div className="tarot-card"></div>
+              </div>
+            </div>
+            <div
+              onClick={toggleVisibility}
+              className={`${isVisible ? "fade" : "visible"}`}
+            >
               <TarotCard />
             </div>
-            <div>{!isVisible && null /* single card reading */}</div>
           </Container>
         </Col>
       </Row>
