@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "../styles/container.css";
+import "../styles/landing.css";
 import TarotCard from "./TarotCard";
 
 export default function Landing() {
@@ -26,7 +26,12 @@ export default function Landing() {
         </Col>
         <Col className="image1Background">
           <Container className="min-vh-100 d-flex justify-content-center align-items-center">
-            <div onClick={toggleVisibility}>{isVisible && <TarotCard />}</div>
+            <div
+              onClick={toggleVisibility}
+              className={`${isVisible ? "visible" : "fade"}`}
+            >
+              <TarotCard />
+            </div>
             <div>{!isVisible && null /* single card reading */}</div>
           </Container>
         </Col>
