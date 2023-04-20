@@ -12,7 +12,7 @@ export default function Landing() {
           <div className="d-flex align-items-center justify-content-center">
             <h3 id="landingQuote">
               “Yesterday's the past, tomorrow's the future, but today is a gift.
-              That's why it's called the present.”{" "}
+              That's why it's called the present.”
               <span className="author">~ Bil Keane</span>
             </h3>
           </div>
