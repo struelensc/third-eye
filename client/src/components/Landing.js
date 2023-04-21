@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../styles/landing.css";
-import TarotCard from "./snippets/TarotCard";
+import TarotCard from "./snippets/TarotCard/TarotCard";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_CARD } from "../utils/queries";

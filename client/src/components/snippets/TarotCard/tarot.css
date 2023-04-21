@@ -5,18 +5,18 @@
 }
 
 .tarot-card {
-  background-color: indigo;
+  background-color: #d7d7d5;
   position: absolute;
   border-radius: 1vmin;
   transition: transform 800ms cubic-bezier(0.2, 0.73, 0.27, 0.86);
 }
 
 .tarot-card:nth-child(1) {
-  background-color: blue;
+  background-color: #9d333f;
   transform: translateX(-10%) rotate(-2deg);
 }
 .tarot-card:nth-child(2) {
-  background-color: teal;
+  background-color: #36576d;
   transform: translateX(5%) rotate(3deg);
 }
 .tarot-card:nth-child(3) {
