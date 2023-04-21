@@ -1,5 +1,5 @@
-import "../styles/landing.css";
-import "../styles/tarot.css";
+import "../../styles/landing.css";
+import "../../styles/tarot.css";
 
 export default function TarotCard() {
   return (

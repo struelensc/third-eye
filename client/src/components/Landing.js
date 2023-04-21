@@ -3,16 +3,20 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../styles/landing.css";
-import TarotCard from "./TarotCard";
+import TarotCard from "./snippets/TarotCard";
 
 import { useQuery } from "@apollo/client";
-import {} from "../../utils/queries";
+import { QUERY_CARD } from "../utils/queries";
 
 export default function Landing() {
   const [isVisible, setVisible] = useState(true);
 
-  const toggleVisibility = () => {
+  // query data
+  const cardInfo = useQuery(QUERY_CARD);
+
+  const onClick = () => {
     setVisible(!isVisible);
+    console.log(cardInfo);
   };
 
   return (
@@ -30,7 +34,7 @@ export default function Landing() {
         <Col className="image1Background">
           <Container className="min-vh-100 d-flex justify-content-center align-items-center">
             <div
-              onClick={toggleVisibility}
+              onClick={onClick}
               className={`${isVisible ? "visible" : "fade"}`}
             >
               {/* Filler card stack */}
@@ -41,7 +45,7 @@ export default function Landing() {
               </div>
             </div>
             <div
-              onClick={toggleVisibility}
+              onClick={onClick}
               className={`${isVisible ? "fade" : "visible"}`}
             >
               <TarotCard />
