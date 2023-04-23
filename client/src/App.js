@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
@@ -11,7 +11,7 @@ import { setContext } from "@apollo/client/link/context";
 import Landing from "./components/Landing";
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: process.env.REACT_APP_GRAPHQL_ENDPOINT || "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -33,7 +33,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Landing />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+        </Routes>
       </Router>
     </ApolloProvider>
   );
