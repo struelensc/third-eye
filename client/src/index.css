@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@300;400&display=swap");
 
+:root {
+  --fontColor: #d7d7d5;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  color: #d7d7d5;
   background-color: #1d292f;
+  color: var(--fontColor);
 }

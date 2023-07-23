@@ -1,4 +1,3 @@
-import "../../../styles/landing.css";
 import "./tarot.css";
 
 export default function TarotCard({ name }) {
