@@ -1,3 +1,8 @@
-nav {
-  color: var(--fontColor);
+.navbar-brand,
+.navbar-nav a {
+  color: var(--fontColor) !important;
+}
+
+.navbar-nav a:hover {
+  color: var(--primaryAccent) !important;
 }
