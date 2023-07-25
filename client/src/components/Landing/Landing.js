@@ -9,7 +9,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_CARD } from "../../utils/queries";
 
 export default function Landing() {
-  // query data
+  // query single card data
   const { loading, data } = useQuery(QUERY_CARD);
   const [isVisible, setVisible] = useState(true);
 
@@ -30,25 +30,13 @@ export default function Landing() {
           </div>
         </Col>
         <Col className="image1Background">
-          <Container className="min-vh-100 d-flex justify-content-center align-items-center">
-            <div
+          {data && data.getCard && (
+            <TarotCard
+              name={data.getCard.name}
+              isVisible={isVisible}
               onClick={onClick}
-              className={`${isVisible ? "visible" : "fade"}`}
-            >
-              {/* Filler card stack */}
-              <div className="card-group">
-                <div className="tarot-card"></div>
-                <div className="tarot-card"></div>
-                <div className="tarot-card"></div>
-              </div>
-            </div>
-            <div
-              onClick={onClick}
-              className={`${isVisible ? "fade" : "visible"}`}
-            >
-              {data && data.getCard && <TarotCard name={data.getCard.name} />}
-            </div>
-          </Container>
+            />
+          )}
         </Col>
       </Row>
     </Container>
